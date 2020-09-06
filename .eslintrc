@@ -1,0 +1,36 @@
+{
+  "root": true,
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "plugins": ["prettier", "@typescript-eslint"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "prettier",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "env": {
+    "jest": true
+  },
+  "rules": {
+    "@typescript-eslint/no-explicit-any": 0,
+    "react/prop-types": 0
+  },
+  "globals": {
+    "global": true,
+    "document": true,
+    "module": true,
+    "window": true,
+    "ErrorUtils": true,
+    "__DEV__": true,
+    "console": true,
+    "WebSocket": true,
+    "fetch": true
+  }
+}
