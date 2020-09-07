@@ -1,11 +1,4 @@
-import { Maybe } from "../types";
-
-interface DensitySocketReturn {
-  url: string;
-  ttl: string;
-}
-
-type GetDensitySocket = (url: string, key: string) => Promise<Maybe<DensitySocketReturn>>;
+type GetDensitySocket = (url: string, key: string) => Promise<any>;
 
 export const getDensitySocket: GetDensitySocket = async (url, key) =>
   (

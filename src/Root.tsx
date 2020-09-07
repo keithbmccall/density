@@ -4,6 +4,7 @@ import { setGlobalHandler } from "./utils/errors.util";
 import { dkey } from "./keys";
 import { getDensitySocket } from "./api";
 import { useDispatch, useSelector } from "react-redux";
+import { spacesSelector } from "./store/selectors";
 
 const Root: FC = () => {
   useEffect(() => {
@@ -11,8 +12,8 @@ const Root: FC = () => {
   });
 
   const dispatch = useDispatch();
-  const doorwayCount = useSelector(state => state.doorway.doorwayCount);
-
+  const spaces = useSelector(spacesSelector);
+  console.log("Spaces", spaces);
   useEffect(() => {
     getDensitySocket("https://api.density.io/v2/sockets", dkey).then(r => {
       const ws = new WebSocket(r.url);
@@ -24,9 +25,8 @@ const Root: FC = () => {
       };
 
       ws.onmessage = e => {
-        console.log(JSON.parse(e.data).payload);
         dispatch({
-          type: "SET_COUNT",
+          type: "SET_SPACES",
           payload: JSON.parse(e.data).payload
         });
       };
@@ -43,11 +43,7 @@ const Root: FC = () => {
     });
   }, [dispatch]);
 
-  return (
-    <View>
-      <Text>{doorwayCount.count}</Text>
-    </View>
-  );
+  return <View>{/*<Text>{doorwayCount.count}</Text>*/}</View>;
 };
 
 export default Root;

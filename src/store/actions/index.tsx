@@ -1,2 +1,2 @@
 export * from "./app";
-export * from "./doorway";
+export * from "./spaces";

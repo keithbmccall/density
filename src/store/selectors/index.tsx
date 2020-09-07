@@ -1,4 +1,4 @@
 import { RootState } from "../reducers";
-import { DoorwayCount } from "../types";
+import { SpacePair } from "../types";
 
-export const doorwayCountSelector = (state: RootState): DoorwayCount => state.doorway.doorwayCount;
+export const spacesSelector = (state: RootState): SpacePair => state.spaces.spaces;
