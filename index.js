@@ -1,20 +1,17 @@
 import React from "react";
-import { AppRegistry, StatusBar, SafeAreaView } from "react-native";
+import { AppRegistry } from "react-native";
 import Root from "./src/Root";
 import { name as appName } from "./app.json";
 import { Provider } from "react-redux";
 import { PersistGate } from "redux-persist/integration/react";
-import { rootStore, persistor } from "./src/store";
-import LoadingView from "./src/containers/loading-view";
+import { persistor, rootStore } from "./src/store";
+import LoadingView from "./src/components/loading-view";
 
 const ReduxWrapper = () => {
   return (
     <Provider store={rootStore}>
       <PersistGate loading={<LoadingView />} persistor={persistor}>
-        <StatusBar barStyle="dark-content" />
-        <SafeAreaView>
-          <Root />
-        </SafeAreaView>
+        <Root />
       </PersistGate>
     </Provider>
   );

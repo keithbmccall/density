@@ -1,23 +1,21 @@
-import { BEGIN_LOADING, END_LOADING } from "../../actions";
 import { Action, AppState } from "../../types";
-
-
+import { BEGIN_REFRESHING, END_REFRESHING } from "../../actions";
 
 const initialState: AppState = {
-  isLoading: false
+  isRefreshing: false
 };
 
 export default (state: AppState = initialState, action: Action): AppState => {
   switch (action.type) {
-    case BEGIN_LOADING:
+    case BEGIN_REFRESHING:
       return {
         ...state,
-        isLoading: true
+        isRefreshing: true
       };
-    case END_LOADING:
+    case END_REFRESHING:
       return {
         ...state,
-        isLoading: false
+        isRefreshing: false
       };
     default:
       return state;

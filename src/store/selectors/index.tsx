@@ -1,4 +1,6 @@
 import { RootState } from "../reducers";
-import { SpacePair } from "../types";
+import { Space } from "../types";
 
-export const spacesSelector = (state: RootState): SpacePair => state.spaces.spaces;
+export const spacesSelector = (state: RootState): Space[] => state.spaces.spaces;
+
+export const refreshingSelector = (state: RootState): boolean => state.app.isRefreshing;

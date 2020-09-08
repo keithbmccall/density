@@ -1,6 +1,6 @@
 const primaryColors = {
   blue: "#0f52ba",
-  grey: "#b8b799",
+  grey: "#c5c5c0",
   white: "#ffffff",
   black: "000000",
   //

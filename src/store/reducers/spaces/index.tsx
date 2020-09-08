@@ -1,16 +1,20 @@
-import { SET_SPACES } from "../../actions";
+import { SET_COUNT, SET_SPACES } from "../../actions";
 import { Action, SpacesState } from "../../types";
-import { transformSpaces } from "../../utils";
+import { parseCount, parseSpaces } from "../../utils";
 
 const initialState: SpacesState = {
-  spaces: {}
+  spaces: []
 };
 
 export default (state: SpacesState = initialState, action: Action): SpacesState => {
   switch (action.type) {
+    case SET_COUNT:
+      return {
+        spaces: parseCount(action.payload, state.spaces)
+      };
     case SET_SPACES:
       return {
-        spaces: { ...transformSpaces(action.payload, state.spaces) }
+        spaces: parseSpaces(action.payload, state.spaces)
       };
 
     default:
