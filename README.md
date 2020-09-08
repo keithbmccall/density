@@ -4,7 +4,7 @@
  
 Here is a small working application which displays a list of spaces, along with real-time headcount updates. The app is a bit "over-engineered" for the requirements, but I wanted to demonstrate how I would organize such a project with expansion in mind.
 
-Note: the authorization key gitignored out of the project for security. Please add the key manually before launching the app.
+Note: the authorization key was gitignored out of the project for security. Please add the key manually before launching the app.
 ## Assignment
 
 - Render a list of Density spaces, and their current count
