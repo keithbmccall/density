@@ -8,13 +8,17 @@ Note: the authorization key gitignored out of the project for security. Please a
 ## Assignment
 
 - Render a list of Density spaces, and their current count
-    The list component can be found in `components/spaces/spaces-list`
+
+The list component can be found in `components/spaces/spaces-list`
 - Update the current count of the spaces as entrance / exits occur in real-time
-    The current count is updated within the `useSpaces` hooks
+
+The current count is updated within the `useSpaces` hooks
 - Provide a manual pull-to-refresh mechanism to reload the dataset
-    We're using react-native's built in pull to refresh
+
+We're using react-native's built in pull to refresh
 - Use redux and a persistent store to cache data for a speedy first-load experience
-    We use redux-persist to cache the store locally
+
+We use redux-persist to cache the store locally
 
 ## Deliverables
 
