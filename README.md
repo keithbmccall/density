@@ -25,3 +25,7 @@ We use redux-persist to cache the store locally
 - [x] React-Native app (React Native Init)
 - [x] Websocket connection for real-time updates
 - [x] Persistent store for a speedy first-load experience
+
+## Instructions
+
+To run `yarn` in the project root, then `cd ios && pod install`, then `yarn start`
